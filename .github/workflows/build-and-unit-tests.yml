@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: Build and Test
-    runs-on: ${{ matrix.is }}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
