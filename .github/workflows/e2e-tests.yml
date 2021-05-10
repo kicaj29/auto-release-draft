@@ -2,7 +2,7 @@ name: e2e tests
 on:
   push:
     branches:
-      - master
+      - main
   create: # also run when a new branch is pushed or a tag is created
 jobs:
   build:
