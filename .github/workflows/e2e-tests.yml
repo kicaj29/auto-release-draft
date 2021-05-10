@@ -1,0 +1,21 @@
+name: e2e tests
+on:
+  push:
+    branches:
+      - master
+  create: # also run when a new branch is pushed or a tag is created
+jobs:
+  build:
+    name: e2e tests
+    runs-on: ${{ matrix.is }}
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    steps:
+      - name: Get the sources
+        uses: actions/checkout@v1
+      - name: Create a release draft for a version tag
+        id: create-release-draft
+        uses: ./ # because the action is in the same repository we can reference to it by point local directory
+      - name: Print the URL of the release draft
+        run: echo ${{ steps.create-release-draft.outputs.release-url }}
