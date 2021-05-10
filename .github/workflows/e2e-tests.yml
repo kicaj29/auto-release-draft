@@ -17,6 +17,8 @@ jobs:
       - name: Create a release draft for a version tag
         id: create-release-draft
         uses: ./ # because the action is in the same repository we can reference to it by point local directory
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Print the URL of the release draft
         # it is implicit assertion because if the output parameter would not be set it would fail
         # NOTE: it looks that it only fails on Windows, on Linux it passes even if the parameter is not returned
