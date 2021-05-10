@@ -3,5 +3,5 @@ In this repo is committed dist folder because e2e workflow only runs the tests w
 To regenerate disc folder run:
 ```
 npm run build
-npm run pack
+npm run package
 ```
