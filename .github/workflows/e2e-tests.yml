@@ -18,4 +18,6 @@ jobs:
         id: create-release-draft
         uses: ./ # because the action is in the same repository we can reference to it by point local directory
       - name: Print the URL of the release draft
-        run: echo ${{ steps.create-release-draft.outputs.release-url }} # it is implicit assertion because if the output parameter would not be set it would fail
+        # it is implicit assertion because if the output parameter would not be set it would fail
+        # NOTE: it looks that it only fails on Windows, on Linux it passes even if the parameter is not returned
+        run: echo ${{ steps.create-release-draft.outputs.release-url }} 
