@@ -5,3 +5,6 @@ To regenerate disc folder run:
 npm run build
 npm run package
 ```
+
+# links
+https://github.com/ecampidoglio/auto-release-draft   
