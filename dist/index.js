@@ -270,7 +270,7 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const token = core.getInput('repo-token');
-            let releaseUrl = '';
+            let releaseUrl = 'NOT_SET';
             const tag = event.getCreatedTag();
             if (tag && version.isSemVer(tag)) {
                 const changelog = yield git.getChangesIntroducedByTag(tag);

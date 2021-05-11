@@ -7,7 +7,7 @@ import * as github from './github';
 export async function run(): Promise<void> {
   try {
     const token = core.getInput('repo-token');
-    let releaseUrl = '';
+    let releaseUrl = 'NOT_SET';
 
     const tag = event.getCreatedTag();
 
