@@ -1,11 +1,13 @@
 import * as core from '@actions/core';
 import { run } from '../src/main';
+// import * as semver from 'semver';
 
 // mock the actions API (it will create in-memory objects that fake API from the actions):
 jest.mock('@actions/core');
 
 describe('When running the action', () => {
   const fakeSetOutput = core.setOutput as jest.MockedFunction<typeof core.setOutput>;
+  // const r = semver.valid('v1.0.0');
 
   test('it should set the release-url output paramter', async () => {
     await run();

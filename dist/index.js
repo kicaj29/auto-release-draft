@@ -106,7 +106,8 @@ function getPreviousVersionTag(tag) {
         const exitCode = yield exec_1.exec('git', // name of command
         [
             'describe',
-            '--match', 'v[0-9]*',
+            '--match',
+            'v[0-9]\.[0-9]\.[0-9]*',
             '--abbrev=0',
             '--first-parent',
             `${tag}^` // start looking from the parent of the specified tag

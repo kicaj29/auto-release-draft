@@ -26,12 +26,12 @@ export async function getPreviousVersionTag(tag: string): Promise<string | null>
     const exitCode = await exec(
         'git', // name of command
         [
-            'describe',         // Looks for tags
-            '--match',          // Considers only tags that match a pattern
-            'v[0-9]*',          // Matches only version tags
-            '--abbrev=0',       // print only tag name
-            '--first-parent',   // only search the current branch in case of merge commit
-            `${tag}^`           // start looking from the parent of the specified tag
+            'describe',                     // Looks for tags
+            '--match',                      // Considers only tags that match a pattern
+            'v[0-9]\.[0-9]\.[0-9]*',        // Matches only version tags
+            '--abbrev=0',                   // print only tag name
+            '--first-parent',               // only search the current branch in case of merge commit
+            `${tag}^`                       // start looking from the parent of the specified tag
         ],
         options
     );

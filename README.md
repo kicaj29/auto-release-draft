@@ -60,7 +60,7 @@ Next commit the `dist` folder.
 Next add some commits and add tag with proper version:
 
 ```
-git tag -a v1.0.1 -m "This is version 1.0.1"
+git tag -a v1 -m "This is version 1"
 git tag
 git push --tags
 ```
