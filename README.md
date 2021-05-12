@@ -60,7 +60,7 @@ Next commit the `dist` folder.
 Next add some commits and add tag with proper version:
 
 ```
-git tag -a v1 -m "This is version 1"
+git tag -a v1.0.5 -m "This is version 1.0.5"
 git tag
 git push --tags
 ```
@@ -87,3 +87,5 @@ Link to draft releases: https://github.com/kicaj29/auto-release-draft/releases
 
 # links
 https://github.com/ecampidoglio/auto-release-draft   
+
+...
