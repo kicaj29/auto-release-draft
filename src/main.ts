@@ -10,8 +10,10 @@ export async function run(): Promise<void> {
     let releaseUrl = 'NOT_SET';
 
     const tag = event.getCreatedTag();
+    core.info(`Created tag is: ${tag}`);
 
     if (tag && version.isSemVer(tag)) {
+      core.info(`Created tag is sem ver.`);
       const changelog = await git.getChangesIntroducedByTag(tag);
 
       releaseUrl = await github.createReleaseDraft(tag, token, changelog);

@@ -107,7 +107,7 @@ function getPreviousVersionTag(tag) {
         [
             'describe',
             '--match',
-            'v[0-9]\.[0-9]\.[0-9]*',
+            'v[0-9]*\.[0-9]*\.[0-9]*',
             '--abbrev=0',
             '--first-parent',
             `${tag}^` // start looking from the parent of the specified tag
@@ -273,7 +273,9 @@ function run() {
             const token = core.getInput('repo-token');
             let releaseUrl = 'NOT_SET';
             const tag = event.getCreatedTag();
+            core.info(`Created tag is: ${tag}`);
             if (tag && version.isSemVer(tag)) {
+                core.info(`Created tag is sem ver.`);
                 const changelog = yield git.getChangesIntroducedByTag(tag);
                 releaseUrl = yield github.createReleaseDraft(tag, token, changelog);
             }

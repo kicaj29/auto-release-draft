@@ -84,6 +84,12 @@ git push origin :v1.0.1
 
 Link to draft releases: https://github.com/kicaj29/auto-release-draft/releases
 
+# Testing git commands
+
+```
+git describe --match v[0-9]*\.[0-9]*\.[0-9]* --abbrev=0 --first-parent v1.0.6^
+git log --format=%s v1.0.5..v1.0.6
+```
 
 # links
 https://github.com/ecampidoglio/auto-release-draft   
