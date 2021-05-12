@@ -22,8 +22,6 @@ Next click Use this template to create a new repo:
 
 ![007-create-action-repo.png](./images/007-create-action-repo.png)
 
-Link to repo with this action: https://github.com/kicaj29/auto-release-draft
-
 Clone the repo and open it with VS code.
 Configure default tasks for build (CTRL + SHIFT + B) and test (CTRL + SHIFT + T).
 Open command palette to specify what commands(scripts) should be run when we trigger the tasks.
@@ -51,11 +49,13 @@ After this you can set breakpoint in a test and press `F5` to start debugging:
 
 In this repo is committed dist folder because e2e workflow only runs the tests without running a build or reusing earlier run build.   
 
-To regenerate disc folder run:
+To regenerate disc folder run (it is needed only when we want use newest version of the action):
 ```
 npm run build
 npm run package
 ```
+
+Next commit the `dist` folder.   
 
 Next add tag with proper version:
 
