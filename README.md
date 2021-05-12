@@ -57,7 +57,7 @@ npm run package
 
 Next commit the `dist` folder.   
 
-Next add tag with proper version:
+Next add some commits and add tag with proper version:
 
 ```
 git tag -a v1.0.1 -m "This is version 1.0.1"
