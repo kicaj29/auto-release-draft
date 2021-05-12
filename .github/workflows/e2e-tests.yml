@@ -1,8 +1,9 @@
 name: e2e tests
 on:
-  push:
-    branches:
-      - main
+  # publish release only after adding new tag (not after every push to master)
+  #push:
+  #  branches:
+  #    - main
   create: # also run when a new branch is pushed or a tag is created
 jobs:
   build:
